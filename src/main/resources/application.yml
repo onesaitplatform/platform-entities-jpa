@@ -5,12 +5,13 @@ spring:
  main.allow-circular-references: true
  main.allow-bean-definition-overriding: true
  datasource:
-   url: jdbc:postgresql://localhost:5432/pts_bpo
-   username: postgres
-   password: changeIt!
+   url: jdbc:h2:mem:testdb
+   username: sa
+   password: 
+   driverClassName: org.h2.Driver
  jpa:
       open-in-view: false
-      properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+      properties.hibernate.dialect: org.hibernate.dialect.H2Dialect
       hibernate.ddl-auto: update
       properties:
         hibernate:
